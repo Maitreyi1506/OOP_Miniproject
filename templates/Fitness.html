@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VChat-Fitness</title>
+    <style>body{background-color:#f9d5e5;}</style>
+</head>
+<body >
+<label style=font-size:30px;">{% for c in get_flashed_messages(category_filter=["niceday"])%}
+    {{c}}
+    {% endfor %}</label>
+<br><br>
+<form method="post">
+    <label style=font-size:25px;">{% for c in get_flashed_messages(category_filter=["diastolic"])%}
+    {{c}}
+    {% endfor %}:</label> <input type="text" name="Diastolic"><br>
+    <br>
+
+    <label style=font-size:25px;">{% for c in get_flashed_messages(category_filter=["systolic"])%}
+    {{c}}
+    {% endfor %}:</label> <input type="text" name="systolic"><br>
+    <br>
+
+    <label style=font-size:25px;"l>{% for c in get_flashed_messages(category_filter=["steps"])%}
+    {{c}}
+    {% endfor %}:</label> <input type="text" name="steps"><br>
+    <br>
+
+    <label style=font-size:25px;">{% for c in get_flashed_messages(category_filter=["exercise"])%}
+    {{c}}
+    {% endfor %}:</label> <input type="text" name="exercise"><br>
+    <br>
+    <input type="submit" value="Send" style=font-size:20px;">
+    <br>
+    <br>
+
+    <label style=font-size:28px;">{% for c in get_flashed_messages(category_filter=["pressure"])%}
+    {{c}}
+    {% endfor %}</label>
+    <br>
+    <br>
+    <br>
+    <label style=font-size:28px;">{% for c in get_flashed_messages(category_filter=["stepss"])%}
+    {{c}}
+    {% endfor %}</label>
+    <br>
+    <br>
+    <br>
+    <label style=font-size:28px;">{% for c in get_flashed_messages(category_filter=["timegoals"])%}
+    {{c}}
+    {% endfor %}</label>
+
+
+</form>
+</body>
+</html>
